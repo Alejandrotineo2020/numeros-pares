@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="numero8.MainPage"
+             Title="numeros primos"
+             BackgroundColor="DarkSlateGrey">
+
+    <Grid RowDefinitions="Auto , *" Padding="20">
+
+        <Label Grid.Row="0"
+               Text="LIsta de Numeros (1-100)"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="BlueViolet"
+               Margin="0,0,0,15"/>
+
+       
+
+        <ListView Grid.Row="1"
+                  x:Name="NumerosListView"
+                  SelectionMode="None"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="True">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Border Stroke="Blue"
+                                StrokeThickness="2"
+                                Margin="5,5"
+                                Padding="15"
+                                BackgroundColor="Gray">
+
+
+                            <Label Text="{Binding .}"
+                                   FontSize="18"
+                                   HorizontalOptions="Center"
+                                   TextColor="Black"/>
+
+                        </Border>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </Grid>
+
+
+</ContentPage>
